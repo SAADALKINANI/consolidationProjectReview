@@ -106,7 +106,7 @@ def valid_cards(player_name, hand, lead_face=None):
 
 # ~~~~~~~~~~~~~~~~~~~~~~~~~ THIS IS WHERE THE GAME BEGINS ~~~~~~~~~~~~~~~~~~~~~~~~~ #
 
-
+# Consider separating the main() into a separate python file for clarity and potential reusability.
 def main():
     deck = create_deck()
     random.shuffle(deck)
@@ -130,6 +130,7 @@ def main():
     print(f"The Round Leader is... {round_leader}! Congratulations! The Game Will Now Begin!")
 
     # beginning of game code for loop
+    # + 1 is unnecessary and  repetitive, instead, just write range(1, total_rounds + 1) to be clearer.
     for round_number in range(1, total_rounds, + 1):
 
         # presents the round number, player 1, and player 2's hands
